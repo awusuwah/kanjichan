@@ -1,3 +1,7 @@
 <template>
-  <div>Profile</div>
+  <DefaultLayout>Profile</DefaultLayout>
 </template>
+
+<script setup lang="ts">
+import DefaultLayout from "~/layouts/Default.vue";
+</script>

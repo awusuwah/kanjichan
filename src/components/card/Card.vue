@@ -1,11 +1,6 @@
 <template>
-  <div
-    class="w-full px-8 py-6 bg-gray-800 border border-gray-700 rounded-lg shadow-lg space-y-4"
-  >
-    <h3
-      v-if="heading"
-      class="text-center text-2xl font-semibold leading-6 text-gray-100"
-    >
+  <div class="w-full px-8 py-6 bg-gray-900 border border-gray-800 rounded-lg shadow-lg space-y-4">
+    <h3 v-if="heading" class="text-center text-2xl font-semibold leading-6 text-gray-100">
       {{ heading }}
     </h3>
     <slot />

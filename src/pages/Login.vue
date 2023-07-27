@@ -1,22 +1,24 @@
 <template>
-  <div class="w-screen h-screen flex items-center justify-center">
-    <div class="w-1/3 mx-auto">
-      <Card heading="Login">
-        <TextInput v-model="email" label="Email" type="email" placeholder="marko@markomaric.me" />
-        <TextInput v-model="password" label="Password" type="password" />
-
-        <div class="flex justify-end">
-          <Button @click="loginUser">Login</Button>
-        </div>
-      </Card>
+  <DefaultLayout>
+    <div class="flex items-center justify-center">
+      <div class="w-full mx-auto">
+        <Card heading="Login">
+          <TextInput v-model="email" label="Email" type="email" placeholder="marko@markomaric.me" />
+          <TextInput v-model="password" label="Password" type="password" />
+          <div class="flex justify-end">
+            <Button @click="loginUser">Login</Button>
+          </div>
+        </Card>
+      </div>
     </div>
-  </div>
+  </DefaultLayout>
 </template>
 
 <script setup lang="ts">
 import { ref } from "vue";
 import { getAuth, signInWithEmailAndPassword } from "firebase/auth";
 
+import DefaultLayout from "~/layouts/Default.vue";
 import Button from "@/button/Button.vue";
 import Card from "@/card/Card.vue";
 import TextInput from "@/textInput/TextInput.vue";
